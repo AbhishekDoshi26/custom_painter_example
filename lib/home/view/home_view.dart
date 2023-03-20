@@ -17,7 +17,7 @@ class HomeView extends StatelessWidget {
             const CustomPaint(
               painter: CustomLine(),
               child: SizedBox(
-                width: 250,
+                width: 150,
               ),
             ),
             Transform.rotate(

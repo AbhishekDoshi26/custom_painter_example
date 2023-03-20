@@ -10,7 +10,7 @@ class CustomLine extends CustomPainter {
       ..strokeWidth = 10;
 
     const p1 = Offset(0, 0);
-    const p2 = Offset(250, 0);
+    const p2 = Offset(180, 0);
 
     canvas.drawLine(p1, p2, paint);
   }
