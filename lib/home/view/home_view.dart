@@ -1,3 +1,6 @@
+import 'dart:math';
+
+import 'package:custom_painter_example/home/widgets/custom_line.dart';
 import 'package:custom_painter_example/home/widgets/custom_triangle.dart';
 import 'package:flutter/material.dart';
 
@@ -8,12 +11,26 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-        child: CustomPaint(
-          painter: const CustomTriangle(),
-          child: SizedBox(
-            height: MediaQuery.of(context).size.height / 2,
-            width: MediaQuery.of(context).size.height / 2,
-          ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const CustomPaint(
+              painter: CustomLine(),
+              child: SizedBox(
+                width: 250,
+              ),
+            ),
+            Transform.rotate(
+              angle: pi / 2,
+              child: const CustomPaint(
+                painter: CustomTriangle(),
+                child: SizedBox(
+                  height: 50,
+                  width: 50,
+                ),
+              ),
+            ),
+          ],
         ),
       ),
     );
